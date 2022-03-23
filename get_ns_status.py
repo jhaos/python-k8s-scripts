@@ -9,12 +9,8 @@ import urllib3
 import json
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-ignored_namespaces = [
-    "default",
-    "kube-public",
-    "kube-system",
-    "kube-node-lease",
-]
+ignored_namespaces = [""]
+
 def main():
     config.load_kube_config()
     c = Configuration()
